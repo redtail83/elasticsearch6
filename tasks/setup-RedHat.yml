@@ -1,0 +1,14 @@
+---
+# file: roles/elasticsearch6/tasks/setup-RedHat.yml
+
+# Import the ElasticSearch PGP Key
+- name: Import the ElasticSearch PGP Key
+  rpm_key: state=present key=https://artifacts.elastic.co/GPG-KEY-elasticsearch
+
+# Add RPM repository
+- name: Add RPM repository
+  copy: src=elasticsearch-6.repo dest=/etc/yum.repos.d/elasticsearch-6.repo mode=644 backup=yes
+
+# be sure ElasticSearch is installed
+- name: be sure ElasticSearch is installed
+  package: name=elasticsearch state=present

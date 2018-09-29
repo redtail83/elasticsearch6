@@ -1,0 +1,6 @@
+---
+# tasks file for elasticsearch6
+
+# Include OS-specific installation tasks.
+- import_tasks: setup-RedHat.yml
+  when: ansible_os_family == 'RedHat'
