@@ -12,3 +12,6 @@
 # be sure ElasticSearch is installed
 - name: be sure ElasticSearch is installed
   package: name=elasticsearch state=present
+
+- name: make sure ElasticSearch is running
+  systemd: state=started name='elasticsearch' daemon_reload=yes enabled=yes
