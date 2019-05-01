@@ -1,2 +1,5 @@
 ---
 # vars file for elasticsearch6
+
+# Environment Variable JAVA_HOME
+java_home: /opt/java/current

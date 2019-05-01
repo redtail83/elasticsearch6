@@ -11,7 +11,11 @@ None.
 Role Variables
 --------------
 
-None.
+Here is the list of all variables for this role.
+```yml
+# Environment Variable JAVA_HOME
+java_home: /opt/java/current
+```
 
 Dependencies
 ------------

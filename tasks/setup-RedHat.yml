@@ -12,6 +12,8 @@
 # be sure ElasticSearch is installed
 - name: be sure ElasticSearch is installed
   package: name=elasticsearch state=present
+  environment:
+    JAVA_HOME: "{{ java_home }}"
 
 - name: make sure ElasticSearch is running
   systemd: state=started name='elasticsearch' daemon_reload=yes enabled=yes
